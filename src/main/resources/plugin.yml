@@ -1,0 +1,17 @@
+name: PrinceServerSystem
+version: '${version}'
+main: com.github.majisyou.princeserversystem.PrinceServerSystem
+api-version: 1.18
+authors: [ majisyou ]
+description: System
+
+commands:
+  maintenance:
+    description: maintenancemodechange
+    usage: <引数1>はmode or player
+    permission: prince_server_maintenance
+
+#  Entity_test:
+#    description: test
+#    usage: test
+#    permission: prince_server_maintenance

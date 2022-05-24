@@ -1,0 +1,10 @@
+# ここに設定したconfigを読み込んで機能する
+
+EntityRange: 10
+EntityLimits: 200
+EntityManage: 100
+
+# trueであったらメンテナンスモードが起動する
+Server_maintenace: 'false'
+Players:
+  - mashi4
