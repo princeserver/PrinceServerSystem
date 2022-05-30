@@ -20,7 +20,8 @@ public class Cmd_maintenance implements CommandExecutor {
 
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
-        if(!sender.hasPermission("prince_server_maintenance")) {            //permissionが持っているなら
+        if(!sender.hasPermission("prince_server_maintenance")) {//permissionが持っているなら
+            sender.sendMessage("You dont have permission");
             return false;
         }
 
