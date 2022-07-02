@@ -4,6 +4,7 @@ import com.github.majisyou.princeserversystem.Entitys.Command.Cmd_test;
 import com.github.majisyou.princeserversystem.Entitys.Events.EntityManagerEvent;
 import com.github.majisyou.princeserversystem.MainSystem.ConfigManager;
 import com.github.majisyou.princeserversystem.Maintenance.commands.Cmd_maintenance;
+import com.github.majisyou.princeserversystem.Maintenance.event.Player_Login;
 import com.github.majisyou.princeserversystem.Maintenance.event.Player_preLogin;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -30,6 +31,7 @@ public final class PrinceServerSystem extends JavaPlugin {
         //Event
         new EntityManagerEvent(this);
         new Player_preLogin(this);
+        new Player_Login(this);
 
         //Command
         new Cmd_maintenance(this);
@@ -42,6 +44,7 @@ public final class PrinceServerSystem extends JavaPlugin {
     public void onDisable() {
         // Plugin shutdown logic
         Bukkit.getScheduler().cancelTasks(this);
+        saveConfig();
         getLogger().info("ServerSystemDisable");
     }
 
