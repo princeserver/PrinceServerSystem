@@ -6,6 +6,9 @@ import com.github.majisyou.princeserversystem.MainSystem.ConfigManager;
 import com.github.majisyou.princeserversystem.Maintenance.commands.Cmd_maintenance;
 import com.github.majisyou.princeserversystem.Maintenance.event.Player_Login;
 import com.github.majisyou.princeserversystem.Maintenance.event.Player_preLogin;
+import com.github.majisyou.princeserversystem.Watchdog.Command.Cmd_GiveStick;
+import com.github.majisyou.princeserversystem.Watchdog.Event.CheckChest;
+import com.github.majisyou.princeserversystem.Watchdog.Event.RedStoneCheck;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -32,9 +35,13 @@ public final class PrinceServerSystem extends JavaPlugin {
         new EntityManagerEvent(this);
         new Player_preLogin(this);
         new Player_Login(this);
+        new CheckChest(this);
+        new RedStoneCheck(this);
+
 
         //Command
         new Cmd_maintenance(this);
+        new Cmd_GiveStick(this);
 //        new Cmd_test(this);
 
         getLogger().info("ServerSystemEnable");

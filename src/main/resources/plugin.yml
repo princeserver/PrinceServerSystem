@@ -11,6 +11,11 @@ commands:
     usage: <引数1>はmode or player
     permission: prince_server_maintenance
 
+  watchdogItem:
+    description: chest inventory
+    usage: no
+    permission: prince_server_maintenance
+
 #  Entity_test:
 #    description: test
 #    usage: test
